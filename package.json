@@ -10,7 +10,7 @@
   "author": "aragocz",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^0.27.2",
     "dotenv": "^16.4.5",
     "jsdom": "^24.1.0",
     "unzipper": "^0.11.5"
