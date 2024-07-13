@@ -3,7 +3,7 @@ const path = require("path")
 const unzip = require("unzipper");
 const axios = require("axios");
 const { JSDOM } = require("jsdom");
-const execdirname = path.dirname(process.execPath);
+const execdirname = __dirname//path.dirname(process.execPath);
 
 require('dotenv').config({
     path:  execdirname+'/.env'
