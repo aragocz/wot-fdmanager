@@ -5,6 +5,6 @@ You've been warned.
 # SETUP
 1. Download the executable (obviously)
 2. In the same folder as the executable, create folder `mod` and `modextracted` and a file `.env`
-3. Into the `.env` type the following `wotPath="PATH"` where `PATH` is replaced by the root folder of WoT example would be `wotPath="C:\Users\aragocz\AppData\Local\Wargaming.net\Worldoftanks\"`, if you don't know the path, you can access it via the launcher
+3. Into the `.env` type the following `wotPath="PATH"` where `PATH` is replaced by the root folder of WoT example would be `wotPath="C:\Games\WorldOfTanksEU"`, if you don't know the path, you can access it via the launcher
 4. Launch the executable
 5. Open WoT and the mod should be there
