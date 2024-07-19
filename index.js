@@ -27,13 +27,13 @@ function extractAndParse(){
 
     const zipname = fs.readdirSync(path.join(execdirname, "/mod/"))[0].split(".zip")[0] + "\\";
 
-    if(fs.existsSync(path.join(process.env.wotPath | "C:\Games\World_of_Tanks_EU", "/mods")))fs.rmSync(path.join(process.env.wotPath | "C:\Games\World_of_Tanks_EU", "/mods"), {recursive:true})
-    if(fs.existsSync(path.join(process.env.wotPath | "C:\Games\World_of_Tanks_EU", "/res_mods")))fs.rmSync(path.join(process.env.wotPath | "C:\Games\World_of_Tanks_EU", "/res_mods"), {recursive:true})
+    if(fs.existsSync(path.join(process.env.wotPath || "C:\Games\World_of_Tanks_EU", "/mods")))fs.rmSync(path.join(process.env.wotPath || "C:\Games\World_of_Tanks_EU", "/mods"), {recursive:true})
+    if(fs.existsSync(path.join(process.env.wotPath || "C:\Games\World_of_Tanks_EU", "/res_mods")))fs.rmSync(path.join(process.env.wotPath || "C:\Games\World_of_Tanks_EU", "/res_mods"), {recursive:true})
 
     fs.createReadStream(path.join(execdirname, "/mod/", fs.readdirSync(path.join(execdirname,"/mod/"))[0])).pipe(unzip.Extract({path: path.join(execdirname,"/modextracted")}))
         .once("close", (e) => {
-            fs.renameSync(path.join(execdirname, "/modextracted/", zipname, "mods"), path.join(process.env.wotPath | "C:\Games\World_of_Tanks_EU", "/mods"));
-            fs.renameSync(path.join(execdirname, "/modextracted/", zipname, "res_mods"), path.join(process.env.wotPath | "C:\Games\World_of_Tanks_EU", "/res_mods"));
+            fs.renameSync(path.join(execdirname, "/modextracted/", zipname, "mods"), path.join(process.env.wotPath || "C:\Games\World_of_Tanks_EU", "/mods"));
+            fs.renameSync(path.join(execdirname, "/modextracted/", zipname, "res_mods"), path.join(process.env.wotPath || "C:\Games\World_of_Tanks_EU", "/res_mods"));
         })
         .once("close", (e) => {
             fs.rmSync(path.join(execdirname+"/mod/", fs.readdirSync(path.join(execdirname, "/mod"))[0]));
